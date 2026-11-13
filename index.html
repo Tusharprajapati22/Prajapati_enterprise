@@ -337,7 +337,7 @@ var $=function(i){return document.getElementById(i)};
 var wa=function(t){window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(t),"_blank")};
 
 /* services + footer list + dropdowns */
-$("svc").innerHTML=SV.map(function(s){return '<div class="card sc"><img src="images/'+s[2]+'.jpg" alt="'+s[0]+'" loading="lazy"><div class="b"><div class="ico"><i class="fa-solid '+s[1]+'"></i></div><h3>'+s[0]+'</h3><p>'+s[3]+'</p><a class="btn wa" href="https://wa.me/'+WA+'?text='+encodeURIComponent("Hello, I want to know about "+s[0])+'">Ask on WhatsApp</a></div></div>'}).join("");
+$("svc").innerHTML=SV.map(function(s){return '<div class="card sc"><img src="+s[2]+.jpg" alt="'+s[0]+'" loading="lazy"><div class="b"><div class="ico"><i class="fa-solid '+s[1]+'"></i></div><h3>'+s[0]+'</h3><p>'+s[3]+'</p><a class="btn wa" href="https://wa.me/'+WA+'?text='+encodeURIComponent("Hello, I want to know about "+s[0])+'">Ask on WhatsApp</a></div></div>'}).join("");
 $("fs").innerHTML=SV.map(function(s){return '<li><a href="#services">'+s[0]+'</a></li>'}).join("");
 var opts=SV.map(function(s){return "<option>"+s[0]+"</option>"}).join("");
 ["cw","fw","qw"].forEach(function(i){$(i).innerHTML=opts});
